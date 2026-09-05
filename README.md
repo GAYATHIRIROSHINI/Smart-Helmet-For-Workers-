@@ -4,7 +4,7 @@ An IoT-based **Smart Safety Helmet** designed to improve worker safety through a
 
 ## 📌 Project Overview
 
-Workers may need to work in low-light environments and may sometimes remove their safety helmets during work. This project develops a smart helmet prototype that combines sensors, an **ESP32 microcontroller**, and electronic components to provide automatic lighting and safety monitoring.
+Workers may need to work in low-light environments and may face different safety conditions during their work. This project develops a smart helmet prototype that combines sensors, an **ESP32 microcontroller**, and electronic components to provide automatic lighting and safety monitoring.
 
 The system uses an **LDR/light sensor** to detect the surrounding light level and automatically controls the helmet headlight. An **IR sensor** is used for detection, and a buzzer provides an audible warning based on the detected condition.
 
@@ -91,11 +91,11 @@ The Smart Safety Helmet can be adapted for different working environments, inclu
 ## 🔌 ESP32 Pin Configuration
 
 | Component          | ESP32 GPIO |
-| ------------------ | ---------: |
-| LDR / Light Sensor |    GPIO 34 |
-| IR Sensor OUT      |    GPIO 27 |
-| Headlight LED      |    GPIO 25 |
-| Buzzer             |    GPIO 26 |
+| ------------------ | ---------- |
+| LDR / Light Sensor | GPIO 34    |
+| IR Sensor OUT      | GPIO 27    |
+| Headlight LED      | GPIO 25    |
+| Buzzer             | GPIO 26    |
 
 > These are the pin assignments used in the Wokwi simulation and can be modified according to the final hardware arrangement.
 
@@ -107,8 +107,8 @@ The system operates continuously through the following process:
 
 1. The ESP32 initializes the connected sensors and output devices.
 2. The LDR sensor reads the surrounding light level.
-3. If the light value is above the programmed threshold, the headlight is turned **ON**.
-4. If the light value is below the threshold, the headlight remains **OFF**.
+3. The ESP32 compares the LDR value with the programmed threshold.
+4. Based on the programmed condition, the headlight LED is turned **ON or OFF**.
 5. The IR sensor continuously checks its input condition.
 6. The ESP32 reads the IR sensor state.
 7. Based on the detected IR condition, the buzzer is turned **ON or OFF**.
@@ -129,7 +129,7 @@ The system operates continuously through the following process:
                       │
                 ┌─────┴─────┐
                 │           │
-             DARK          BRIGHT
+        Light Value > 1500   ≤ 1500
                 │           │
                 ▼           ▼
         Headlight ON   Headlight OFF
@@ -175,7 +175,7 @@ The system operates continuously through the following process:
        │ Headlight │      │  Buzzer   │
        │    LED    │      │  Warning  │
        └───────────┘      └───────────┘
-             
+
              ┌──────────────────┐
              │    IR Sensor     │
              │    Detection     │
@@ -291,7 +291,7 @@ These improvements can transform the prototype into a more comprehensive **smart
 
 ---
 
-##  Conclusion
+## 📝 Conclusion
 
 The **Smart Safety Helmet** successfully demonstrates the integration of an ESP32, LDR/light sensor, IR sensor, LED headlight, and buzzer into a wearable safety prototype.
 
