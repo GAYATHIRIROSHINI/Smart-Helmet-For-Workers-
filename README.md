@@ -150,7 +150,6 @@ The system operates continuously through the following process:
                        │
                        ▼
                   Repeat Loop
----
 ```
 
 ## 🧩 System Architecture
