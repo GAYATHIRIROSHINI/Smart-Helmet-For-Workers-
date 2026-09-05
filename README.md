@@ -195,7 +195,14 @@ The ESP32 source code used for the Wokwi simulation is available in the `Code` f
 * [`sketch.ino`](Code/sketch.ino) — ESP32 program
 * [`diagram.json`](Code/diagram.json) — Wokwi circuit configuration
 
+## Documentation
+
+Detailed project documentation is available here:
+
+- [Project Documentation](Docs/project-documentation.md)
+
 ---
+
 
 ## 🧪 Simulation Output
 
