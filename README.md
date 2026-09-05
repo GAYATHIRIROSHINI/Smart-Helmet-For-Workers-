@@ -116,43 +116,42 @@ The system operates continuously through the following process:
 
 ---
 
-## 🔁 System Flow
+##  System Flow
 
 ```text
                     START
-                      │
-                      ▼
-             ESP32 Initialization
-                      │
-                      ▼
-              Read LDR Sensor
-                      │
-                ┌─────┴─────┐
-                │           │
-        Light Value > 1500   ≤ 1500
-                │           │
-                ▼           ▼
-        Headlight ON   Headlight OFF
-                │           │
-                └─────┬─────┘
-                      │
-                      ▼
-                Read IR Sensor
-                      │
-                ┌─────┴─────┐
-                │           │
-             IR HIGH       IR LOW
-                │           │
-                ▼           ▼
-            Buzzer ON    Buzzer OFF
-                │           │
-                └─────┬─────┘
-                      │
-                      ▼
-                 Repeat Loop
-```
-
+                       │
+                       ▼
+              ESP32 Initialization
+                       │
+                       ▼
+                Read LDR Sensor
+                       │
+                 ┌─────┴─────┐
+                 │           │
+         Light Value > 1500   ≤ 1500
+                 │           │
+                 ▼           ▼
+          Headlight ON   Headlight OFF
+                 │           │
+                 └─────┬─────┘
+                       │
+                       ▼
+                 Read IR Sensor
+                       │
+                 ┌─────┴─────┐
+                 │           │
+              IR HIGH       IR LOW
+                 │           │
+                 ▼           ▼
+             Buzzer ON    Buzzer OFF
+                 │           │
+                 └─────┬─────┘
+                       │
+                       ▼
+                  Repeat Loop
 ---
+```
 
 ## 🧩 System Architecture
 
