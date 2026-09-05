@@ -175,7 +175,7 @@ The system operates continuously through the following process:
        │ Headlight │      │  Buzzer   │
        │    LED    │      │  Warning  │
        └───────────┘      └───────────┘
-
+             
              ┌──────────────────┐
              │    IR Sensor     │
              │    Detection     │
@@ -184,8 +184,7 @@ The system operates continuously through the following process:
                       ▼
                    ESP32
 ```
-
----
+```
 
 ## 💻 Source Code
 
