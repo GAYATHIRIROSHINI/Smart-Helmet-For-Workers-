@@ -184,7 +184,7 @@ The system operates continuously through the following process:
                       ▼
                    ESP32
 ```
-```
+
 
 ## 💻 Source Code
 
